@@ -18,7 +18,7 @@ function getdata(){
     }
 
     else if(email==""){
-    alert("minta nomor hp nya dong")
+    alert("masukkan emailnya")
     return
     }  
     
