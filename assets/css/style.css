@@ -1,0 +1,160 @@
+body{
+    margin: 0;
+}
+
+.box{
+    border:  1px black solid;
+    width:  25%;
+    margin: auto;
+    box-shadow: 0px 15px 15px gray ;
+    border-radius: 50px;
+    padding: 60px;  
+}
+
+.customcolor {
+color: bisque;
+}
+
+#description{
+    color: darkblue;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: fit-content;
+}
+
+.my-image{
+    width: 250px;
+}
+.name-img{
+    text-align: center;
+    font-weight: 900;
+    
+}
+.info-img{
+    text-align: center;
+}
+
+
+
+nav{
+    background-color: rgb(203, 202, 202);
+    display: flex;
+    justify-content: space-between;
+}
+
+.left{
+    
+}
+
+.right{
+    background-color: rgb(203, 202, 202);
+    display: flex;
+    align-items: center;
+    padding-right:20px ;
+}
+
+.left ul{
+    display: flex;
+    align-items: center;
+}
+
+.left ul li{
+    list-style-type: none;
+    padding-right:20px ;
+}
+
+.left ul li a{
+    text-decoration: none;
+    color: rgb(205, 7, 7);
+    font-weight: 900;
+    font-size: larger;
+}
+
+.right button{
+    padding: 10px 20px;
+    background-color: blue;
+    border: none;
+    border-radius: 10px;
+    
+}
+
+.right button a{
+ text-decoration: none;  
+ color: white; 
+ font-weight: 700;
+}
+
+.ande{
+    width: 300px;
+    
+}
+
+/* form styling */
+
+form{
+    width: 300px;
+    margin: 30px auto;
+    
+}
+
+input,
+select,
+textarea{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 5px;
+}
+textarea{
+    resize: vertical;
+}
+
+form div{
+    margin-bottom: 15px;
+}
+
+form label{
+    font-weight: 600;
+    font-style: normal;
+}
+
+form button{
+    background-color: orangered;
+    padding: 10px;
+    border-radius: 8px 20px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    color: white;
+    float: right;
+    cursor: pointer;
+}
+
+form button:hover{
+    background-color: rgb(223, 140, 24);
+    transition: 0.5s;
+}
+
+.logo{
+    width: 40px;
+    padding-right: 20px;
+    cursor: pointer;
+}
+.logo:hover{
+    width: 70px;
+    transition: 0.5s;
+}
+
+.kotak{
+    border:  1px black solid;
+    width:  100%;
+    margin: auto;
+    box-shadow: 0px 15px 15px gray ;
+    border-radius: 20px;
+    padding: 100px;
+    justify-content: center;
+    
+}
