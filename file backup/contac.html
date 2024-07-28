@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"a href="./assets/css/style.css">
+</head>
+<body>
+  <nav>
+    <div class="left">
+        <ul>
+            <a href="https://dumbways.id/">     
+            <img class="logo"
+            src="./assets/dwdwd.png"
+            alt="logo-img">
+        </a>
+            
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li class="Blog">
+                <a href="./myproject.html">Blog</a>  
+            </li>
+        </ul>
+    </div>
+    <div class="right">
+        <button>
+            <a href="contac.html">contact me</a> 
+        </button>
+        </div>
+    </div>
+  </nav> 
+  
+  <!-- formulir -->
+   <form>
+    <div class="kotak">
+        <h1 style="text-align: center;"> Get in touch</h1>
+    <div>
+        <label for="Nameinput">Name</label>
+        <input 
+        id="Nameinput" 
+        type="text" 
+        required
+        placeholder="input your name">
+    </div>
+
+    <div>
+        <label for="emailinput">email</label>
+        <input id="emailinput"  type="email"placeholder="abcd@gmail.com">
+    </div>
+
+    <div>
+        <label for="numberinput">Phone</label>
+        <input id="numberinput" type="tel" placeholder="081234567890">
+    </div>
+    
+    <div>
+        <label for="position">Position</label>
+        <select id="position">
+            <option hidden>Select option!</option>
+            <option>Fronten developer</option>
+            <option>Backend developers</option>
+            <option>fullstack developer</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="address">addres</label>
+        <textarea id="address"></textarea>
+    </div>
+
+    <button type="button" onclick="getdata()">submit</button>
+</div>
+</form>
+</body>
+<script src="./assets/js/script.js"></script>
+</html>

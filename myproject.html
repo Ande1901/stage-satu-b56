@@ -2,33 +2,41 @@
   <head>
     <title>Creating Blog Page</title>
     <link rel="stylesheet" href="./assets/css/Blog.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
 
   <body>
     <nav>
       <div class="left">
-          <ul>
-              <a href="https://dumbways.id/">     
-              <img class="logo"
-              src="./assets/unnamed.png"
-              alt="logo-img">
-          </a>
-              
-              <li>
-                  <a href="index.html">Home</a>
-              </li>
-              <li class="Blog">
-                  <a href="./myproject.html">Blog</a>  
-              </li>
-          </ul>
+        <ul>
+          <img class="logo" src="./assets/dwdwd.png" alt="logo-img" />
+          <li><a class="collapse" href="index.html">Home</a></li>
+          <li><a class="collapse" href="./myproject.html">Blog</a></li>
+          <li><a class="collapse" href="testimonal.html">MY testimonial</a></li>
+        </ul>
       </div>
       <div class="right">
-          <button>
-              <a href="contac.html">contact me</a> 
-          </button>
-          </div>
+        <button><a class="collapse" href="contac.html">Contact me</a></button>
       </div>
+      <button class="icon" onclick="openHamburger()">
+        <i class="fa-solid fa-bars fa-3x"></i>
+      </button>
     </nav>
+
+    <div class="dropdown" id="dropdown">
+      <div><a href="index.html">Home</a></div>
+      <div><a href="myproject.html">My Project</a></div>
+      <div><a href="testimonal.html">MY testimonial</a></div>
+      <div><a href="contac.html">Contact Me</a></div>
+    </div>
 
     <!-- Blog -->
     <!-- Form -->
@@ -45,20 +53,28 @@
               <label for="input-blog-content">Content</label>
               <textarea id="input-blog-content"></textarea>
             </div>
-            
+
             <div>
               <label for="">Technologies</label>
               <div class="flex-check">
-                  <div class="flex-box">
-                      <label for="swift"><input type="checkbox" id="swift">Swift</label>
-                      <label for="ruby"><input type="checkbox" id="ruby">Ruby</label>
-                  </div>
-                  <div class="flex-box">
-                      <label for="phyton"><input type="checkbox" id="phyton">Phyton</label>
-                      <label for="javascript"><input type="checkbox" id="javascript">Javascript</label>
-                  </div>
+                <div class="flex-box">
+                  <label for="swift"
+                    ><input type="checkbox" id="swift" />Swift</label
+                  >
+                  <label for="ruby"
+                    ><input type="checkbox" id="ruby" />Ruby</label
+                  >
+                </div>
+                <div class="flex-box">
+                  <label for="phyton"
+                    ><input type="checkbox" id="phyton" />Phyton</label
+                  >
+                  <label for="javascript"
+                    ><input type="checkbox" id="javascript" />Javascript</label
+                  >
+                </div>
               </div>
-          </div>
+            </div>
             <div>
               <label>Upload Image</label>
               <div class="input-blog-image-group">
@@ -85,7 +101,10 @@
       <div id="contents" class="blog-list">
         <!-- dynamic content would be here -->
       </div>
+      <p>time</p>
     </div>
     <script src="./assets/js/blog.js"></script>
+    <script src="./assets/js/nav.js"></script>
+    <script src="./assets/js/nav.js"></script>
   </body>
 </html>
