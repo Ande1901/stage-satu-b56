@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/Blog.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+    
+</head>
+<body>
+    <nav>
+      <div class="left">
+        <ul>
+          <img class="logo" src="/assets/dwdwd.png" alt="logo-img" />
+          <li><a class="collapse" href="/">Home</a></li>
+          <li><a class="collapse" href="/Blog">Blog</a></li>
+          <li><a class="collapse" href="testimonal">MY testimonial</a></li>
+        </ul>
+      </div>
+      <div class="right">
+        <button><a class="collapse" href="contac">Contact me</a></button>
+      </div>
+      <button class="icon" onclick="openHamburger()">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </nav>
+
+    <div class="dropdown" id="dropdown">
+      <div><a href="/">Home</a></div>
+      <div><a href="/Blog">My Project</a></div>
+      <div><a href="testimonal">MY testimonial</a></div>
+      <div><a href="contac">Contact Me</a></div>
+    </div>
+     <div>
+       <h1 style="text-align:center">{{data.title}}</h1> 
+        <div class="container">
+            <img src="./assets/IMG-20240716-WA0000.jpeg" alt="" class="project-image" id="project-image">
+            <div class="detail">
+                <p class="duration">Duration</p>
+                <div class="flex-icon">
+                    <img src="./date.png" alt="">
+                    <p id="project-start">
+                        <p id="project-end"></p>
+                    </p>
+                </div>
+                <div class="flex-icon">
+                    <img src="./assets/clock.png" alt="">
+                    <p> 1 Bulan</p>
+                </div>
+                <p class="technology">Technologies</p>
+                <div class="flex-check">
+                    <div class="flex-box">
+                        <img src="image/swift.png" alt="" id="swift">
+                        <label id="swift-label" for="swift">Swift</label>
+                        <img src="image/ruby.png" alt="" style="margin-left: 50px;" id="ruby">
+                        <label id="ruby-label" for="ruby">Ruby</label>
+                    </div>
+                    <div class="flex-box">
+                        <img src="image/phython.png" alt="" id="phyton">
+                        <label id="phyton-label" for="phyton">Phyton</label>
+                        <img src="image/js.png" alt="" style="margin-left: 50px;" id="javascript">
+                        <label id="javascript-label" for="javascript">Javascript</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p id="project-description" class="description">{{data.description}}</p>
+
+</body>
+<script src="./assets/js/nav.js"></script>
+</html>

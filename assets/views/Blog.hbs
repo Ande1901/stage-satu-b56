@@ -1,0 +1,140 @@
+<html>
+  <head>
+    <title>Creating Blog Page</title>
+    <link rel="stylesheet" href="./assets/css/Blog.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body>
+    <nav>
+      <div class="left">
+        <ul>
+          <img class="logo" src="./assets/dwdwd.png" alt="logo-img" />
+          <li><a class="collapse" href="/">Home</a></li>
+          <li><a class="collapse" href="./Blog">Blog</a></li>
+          <li><a class="collapse" href="testimonal">MY testimonial</a></li>
+        </ul>
+      </div>
+      <div class="right">
+        <button><a class="collapse" href="contac">Contact me</a></button>
+      </div>
+      <button class="icon" onclick="openHamburger()">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </nav>
+
+    <div class="dropdown" id="dropdown">
+      <div><a href="/">Home</a></div>
+      <div><a href="Blog">My Project</a></div>
+      <div><a href="testimonal">MY testimonial</a></div>
+      <div><a href="contac">Contact Me</a></div>
+    </div>
+    /
+    <!-- Blog -->
+    <!-- Form -->
+    <div class="blog">
+      <div class="blog-form">
+        <div class="form-container">
+          <form action="/Blog" method="post">
+            <h1>Create Post Blog</h1>
+            <div>
+              <label for="input-blog-title">Title</label>
+              <input id="input-blog-title" name="title" />
+            </div>
+            <div>
+              <label for="input-blog-content">Content</label>
+              <textarea id="input-blog-content" name="content"></textarea>
+            </div>
+
+            <div>
+              <label for="">Technologies</label>
+              <div class="flex-check">
+                <div class="flex-box">
+                  <label for="swift"><input
+                      type="checkbox"
+                      id="swift"
+                      name="swift"
+                    />Swift</label>
+                  <label for="ruby"><input
+                      type="checkbox"
+                      id="ruby"
+                      name="ruby"
+                    />Ruby</label>
+                </div>
+                <div class="flex-box">
+                  <label for="phyton"><input
+                      type="checkbox"
+                      id="phyton"
+                      name="phyton"
+                    />Phyton</label>
+                  <label for="javascript"><input
+                      type="checkbox"
+                      id="javascript"
+                      name="javascript"
+                    />Javascript</label>
+                </div>
+              </div>
+            </div>
+            <div>
+              <label>Upload Image</label>
+              <div class="input-blog-image-group">
+                <label for="input-blog-image">
+                  <p>Attach File</p>
+                  <img
+                    src="./assets/download.png"
+                    alt="file"
+                    style="width: 40px"
+                  />
+                </label>
+                <input type="file" id="input-blog-image" name="image" hidden />
+              </div>
+            </div>
+            <div class="button-group">
+              <button>Post Blog</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <hr class="line" />
+      <div id="contents" class="blog-list">
+        {{#each data}}
+          <div class="blog-list-item">
+            <div class="blog-image">
+              <img src="${dataBlog[i].img}" alt="" />
+            </div>
+            <div class="blog-content">
+              <div class="btn-group">
+                <a class="btn-edit" href="edit-blog/{{this.id}}">Edit Post</a>
+                <a class="btn-post" href="/delete-blog/{{this.id}}">Delete Post</a>
+              </div>
+              <h1>
+                <a
+                  href="/blog-detail/{{this.id}}"
+                  target="_blank"
+                >{{this.title}}</a>
+              </h1>
+              <div class="detail-blog-content">
+                {{this.createAt}}
+                |
+                {{this.author}}
+              </div>
+              <p>
+                {{this.content}}
+              </p>
+            </div>
+          </div>
+
+        {{/each}}
+        <!-- dynamic content would be here -->
+      
+  </body>
+</html>

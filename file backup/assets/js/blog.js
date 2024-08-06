@@ -11,8 +11,8 @@ function addBlog(event) {
   let javascript = document.getElementById("javascript").checked;
   let img = document.getElementById("input-blog-image").files;
 
-  img = URL.createObjectURL(img[0]);
-  console.log(img);
+    img=URL.createObjectURL(img[0]);
+    console.log(img);
 
   //mobil
   let blog = {
@@ -24,7 +24,7 @@ function addBlog(event) {
     swift,
     ruby,
     phyton,
-    javascript,
+    javascript
   };
 
   dataBlog.push(blog); // dataBlog = [blog,blog]
@@ -34,7 +34,7 @@ function addBlog(event) {
 }
 
 function renderBlog() {
-  let name = "ande";
+  let name = "ande"
   document.getElementById("contents").innerHTML = "";
 
   for (let i = 0; i < dataBlog.length; i++) {
@@ -65,30 +65,33 @@ function renderBlog() {
   }
 }
 
-function getFullDate(waktu) {
+
+function getFullDate(waktu){
   let nameOfMonth = [
     "Januari",
-    "Februari",
-    "Maret",
-    "April",
-    "Mei",
-    "Juni",
-    "Juli",
-    "Agustus",
-    "September",
-    "Oktober",
-    "November",
-    "Desember",
-  ];
+     "Februari",
+     "Maret",
+     "April",
+     "Mei",
+     "Juni",
+     "Juli",
+     "Agustus",
+     "September",
+     "Oktober",
+     "November",
+     "Desember"
+  ]
 
   // console.log(waktu);
-  let tanggal = new Date(waktu);
+  let tanggal=new Date(waktu)
   let date = tanggal.getDate();
   let month = nameOfMonth[waktu.getMonth()];
   let year = tanggal.getFullYear();
 
   let hour = tanggal.getHours();
   let minute = tanggal.getMinutes();
+
+  
 
   return `${date} ${month} ${year} - ${hour}:${minute} WIB`;
 }
@@ -122,6 +125,10 @@ function getDistanceTime(time) {
     return `${distanceTimeInSecond} seconds ago`;
   }
 }
+
+
+ 
+
 
 // const start = new Date()
 // console.log(start);
