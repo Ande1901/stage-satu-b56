@@ -44,11 +44,21 @@
     <div class="blog">
       <div class="blog-form">
         <div class="form-container">
-          <form action="/Blog" method="post">
+          <form action="/Blog" enctype="multipart/form-data" method="post">
             <h1>Create Post Blog</h1>
             <div>
               <label for="input-blog-title">Title</label>
               <input id="input-blog-title" name="title" />
+            </div>
+            <div class="row mb-4">
+                <div class="col">
+                    <label for="inputStartDate">Start Date</label>
+                    <input type="date" class="form-control" id="inputStartDate" name="startDate">
+                </div>
+                <div class="col">
+                    <label for="inputEndDate">End Date</label>
+                    <input type="date" class="form-control" id="inputEndDate" name="endDate">
+                </div>
             </div>
             <div>
               <label for="input-blog-content">Content</label>
@@ -109,11 +119,11 @@
         {{#each data}}
           <div class="blog-list-item">
             <div class="blog-image">
-              <img src="${dataBlog[i].img}" alt="" />
+              <img src="../assets/uploadImage/{{this.image}}" alt="" />
             </div>
             <div class="blog-content">
               <div class="btn-group">
-                <a class="btn-edit" href="edit-blog/{{this.id}}">Edit Post</a>
+                <a class="btn-edit" href="/edit-blog/{{this.id}}">Edit Post</a>
                 <a class="btn-post" href="/delete-blog/{{this.id}}">Delete Post</a>
               </div>
               <h1>
@@ -128,7 +138,7 @@
                 {{this.author}}
               </div>
               <p>
-                {{this.content}}
+                {{this.description}}
               </p>
             </div>
           </div>

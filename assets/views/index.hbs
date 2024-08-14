@@ -15,6 +15,7 @@
 
   <body>
     <nav>
+      {{#if isLogin}}
       <div class="left">
         <ul>
           <img class="logo" src="./assets/dwdwd.png" alt="logo-img" />
@@ -25,11 +26,18 @@
       </div>
       <div class="right">
         <button><a class="collapse" href="contac">Contact me</a></button>
+        <button><a class="collapse" href="/logout">LOGOUT</a></button>
       </div>
       <button class="icon" onclick="openHamburger()">
         <i class="fa-solid fa-bars"></i>
       </button>
+      {{/if}}
+
+
+
     </nav>
+
+
 
     <div class="dropdown" id="dropdown">
       <div><a href="/">Home</a></div>

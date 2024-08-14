@@ -43,12 +43,20 @@
     <div class="blog">
       <div class="blog-form">
         <div class="form-container">
-          <form action="/edit-blog/{{data.id}}" method="post">
+          <form action="/edit-blog/{{data.id}}" enctype="multipart/form-data" method="post">
             <h1>Update Post Blog</h1>
             <div>
               <label for="input-blog-title">Title</label>
               <input id="input-blog-title" name="title" value="{{data.title}}" />
             </div>
+            <div class="col">
+                    <label for="inputStartDate">Start Date</label>
+                    <input type="date" class="form-control" id="inputStartDate" name="startDate">
+                </div>
+                <div class="col">
+                    <label for="inputEndDate">End Date</label>
+                    <input type="date" class="form-control" id="inputEndDate" name="endDate">
+                </div>
             <div>
               <label for="input-blog-content">Content</label>
               <textarea id="input-blog-content"
