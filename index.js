@@ -86,6 +86,7 @@ async function renderBlog(req, res) {
     data: [...Blogs],
   });
 }
+
 async function addBlog(req, res) {
   const newProject = `INSERT INTO public.project(
     title, description, star_date, end_date, image, "createAt")
@@ -121,12 +122,13 @@ async function renderBlogDetail(req, res) {
 
   res.render("blog-detail", {
     data: blog[0],
+    user: req.session.user,
   });
 }
 
 async function renderEditBlog(req, res) {
   const id = req.params.Blog_id;
-
+  console.log(id);
   const blog = await db.query(`SELECT * FROM project WHERE id = ${id}`, {
     type: QueryTypes.SELECT,
   });
